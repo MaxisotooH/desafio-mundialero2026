@@ -1,0 +1,333 @@
+/* Paleta Oficial Mundial 2026 - Versión Premium Vibrante */
+:root {
+    --bg-gradient: linear-gradient(135deg, #121026 0%, #1e1b4b 50%, #312e81 100%);
+    --text-color: #f8fafc; 
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --card-text: #1e1b4b;
+    --accent: #00ff66; /* Verde neón característico 2026 */
+    --accent-dark: #121026;
+    --shadow: rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] {
+    --bg-gradient: linear-gradient(135deg, #090714 0%, #0f0d26 100%);
+    --text-color: #f1f5f9;
+    --card-bg: rgba(30, 27, 75, 0.85);
+    --card-text: #ffffff;
+    --accent: #4ade80;
+    --shadow: rgba(0, 0, 0, 0.6);
+}
+
+body {
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+    min-height: 100vh;
+}
+
+header {
+    padding: 2rem 1rem;
+    background-color: rgba(18, 16, 38, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px var(--shadow);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-mundial {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.balon-icono {
+    width: 48px;
+    height: 48px;
+    filter: brightness(0) invert(1); /* Convierte el icono negro en blanco puro */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+    font-weight: 900;
+    /* EFECTO DEGRADADO EN LAS LETRAS CON LOS COLORES OFICIALES DE TU PATRÓN */
+    background-image: linear-gradient(90deg, #00ff66, #00e6e6, #f50057);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.controles label {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+input {
+    padding: 10px 16px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+input:focus {
+    border-color: var(--accent);
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#toggle-tema {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+#btn-ver-favoritos {
+    background-color: #fbbf24;
+    color: #000;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+.btn-principal {
+    background-color: var(--accent);
+    color: #000;
+    font-size: 1.2rem;
+    padding: 12px 28px;
+    margin: 2.5rem 0;
+    border-radius: 30px;
+    box-shadow: 0 4px 20px rgba(0, 255, 102, 0.4);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem 4rem 1rem;
+}
+
+.titulo-region {
+    text-align: left;
+    border-left: 5px solid var(--accent);
+    padding-left: 12px;
+    margin: 3.5rem 0 1.5rem 0;
+    font-size: 1.8rem;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.grid-region {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjetas */
+.tarjeta {
+    background: var(--card-bg);
+    color: var(--card-text);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 20px var(--shadow);
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 140px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 12px;
+}
+
+.tarjeta h3 {
+    margin: 5px 0;
+    font-size: 1.4rem;
+}
+
+.tarjeta p {
+    margin: 2px 0;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.info-extra {
+    font-size: 0.85rem;
+    margin-top: 10px !important;
+    font-style: italic;
+    border-top: 1px solid rgba(128,128,128,0.2);
+    padding-top: 10px;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.btn-fav {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--card-text);
+    border-radius: 6px;
+    padding: 8px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.btn-fav.activo {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+}
+
+/* Estilos de la Ventana Emergente Cristal (Modal) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+}
+
+.modal:not(.oculta) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background-color: #121026;
+    color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 480px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 6px solid var(--accent);
+    animation: aparecer 0.25s ease-out;
+}
+
+@keyframes aparecer {
+    from { transform: translateY(-40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.cerrar-modal {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover {
+    color: var(--accent);
+}
+
+.modal-cabecera {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-cabecera img {
+    width: 90px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.modal-cabecera h2 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.modal-info p {
+    font-size: 1.1rem;
+}
+
+.modal-info h3 {
+    color: var(--accent);
+    margin-top: 1.5rem;
+}
+
+.modal-info ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.modal-info li {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(18, 16, 38, 0.95);
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 600px) {
+    header h1 { font-size: 1.8rem; }
+    .balon-icono { width: 35px; height: 35px; }
+    .grid-region { grid-template-columns: 1fr; }
+    .controles { flex-direction: column; }
+    .modal-cabecera { flex-direction: column; text-align: center; }
+}
