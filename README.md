@@ -30,8 +30,7 @@ El desarrollo se estructuró en 5 etapas clave:
 
 Aquí puedes ver el resultado del despliegue en vivo:
 
-👉 **[Accede a la web aquí](https://tu-usuario.github.io/desafio-mundialero2026/)**
-
+👉 **[Accede a la web aquí](https://maxisotooh.github.io/desafio-mundialero2026//)**
 
 
 ---
