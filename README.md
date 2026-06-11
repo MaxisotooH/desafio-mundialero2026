@@ -32,11 +32,7 @@ Aquí puedes ver el resultado del despliegue en vivo:
 
 👉 **[Accede a la web aquí](https://tu-usuario.github.io/desafio-mundialero2026/)**
 
----
 
-## 📸 Capturas de Pantalla
-*(Si tienes una imagen, súbela a la carpeta del proyecto y descomenta esta línea)*
-<!-- ![Interfaz Principal](captura-proyecto.png) -->
 
 ---
 
