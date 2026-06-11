@@ -1,55 +1,48 @@
-Desafío: Galería de Selecciones Mundialeras FIFA 2026
-Este proyecto es una aplicación web interactiva desarrollada como desafío práctico de Front-End, diseñada para visualizar las selecciones clasificadas a la Copa del Mundo FIFA 2026, permitiendo la gestión de favoritos y la consulta de información técnica de los planteles.
+# ⚽ Desafío: Galería Mundialera FIFA 2026
 
-🚀 Tecnologías Utilizadas
-HTML5 & CSS3: Estructura semántica y diseño responsivo con efecto Glassmorphism.
+¡Bienvenido al repositorio oficial de mi proyecto de gestión de selecciones para el Mundial 2026! Esta aplicación web permite visualizar, filtrar y gestionar los equipos clasificados a la cita mundialista.
 
-JavaScript (ES6+): Consumo de APIs, manipulación del DOM y lógica de filtrado.
+---
 
-GitHub & Git: Control de versiones y despliegue continuo mediante GitHub Pages.
+## 🚀 Tecnologías Destacadas
+Este proyecto fue desarrollado utilizando un stack tecnológico moderno:
 
-API externa: SampleAPIs (para datos geográficos de países).
+- **Frontend:** HTML5, CSS3 (con diseño responsivo y efectos Glassmorphism).
+- **Lógica:** JavaScript (ES6+), consumo de APIs REST y manipulación del DOM.
+- **Persistencia:** `sessionStorage` para gestión de favoritos local.
+- **Versionado:** Git y despliegue automatizado con GitHub Pages.
 
-📅 Proceso de Desarrollo (Cronología del Proyecto)
-El desarrollo se llevó a cabo siguiendo una metodología incremental:
+---
 
-Etapa 1: Estructura Base y Consumo de API
-Se configuró el entorno con Live Server y se integró la API https://api.sampleapis.com/countries/countries mediante fetch asíncrono para obtener datos actualizados.
+## 🛠️ Arquitectura y Desarrollo
 
-Se implementó la lógica inicial para renderizar tarjetas dinámicas con banderas y nombres de países.
+El desarrollo se estructuró en 5 etapas clave:
 
-Etapa 2: Filtrado y Organización por Confederaciones
-Se desarrolló un diccionario de datos interno (clasificadosMundial) que actúa como filtro de realidad, permitiendo mostrar solo a las 48 selecciones clasificadas al Mundial 2026.
+1. **Integración:** Consumo asíncrono (`fetch`) de la API de países.
+2. **Filtrado Inteligente:** Uso de un diccionario de datos propio para validar los 48 clasificados.
+3. **Persistencia:** Sistema de favoritos guardados en memoria del navegador.
+4. **UX/UI:** Diseño inmersivo con degradados y modales interactivos.
+5. **Despliegue:** Publicación automatizada en la nube.
 
-Se implementó un sistema de subdivisión por regiones (CONMEBOL, UEFA, etc.) utilizando estructuras de control en JavaScript para agrupar los datos antes de pintar el DOM.
+---
 
-Etapa 3: Sistema de Favoritos y Persistencia
-Se integró sessionStorage para permitir que el usuario marque sus selecciones favoritas.
+## 💻 Visualización del Proyecto
 
-Se añadió un filtro global que permite alternar entre la vista de "Todas las selecciones" y "Mis Favoritos" en tiempo real sin recargar la página.
+Aquí puedes ver el resultado del despliegue en vivo:
 
-Etapa 4: Experiencia de Usuario (UX) y Ventana Modal
-Se implementó un componente modal (<dialog> estilizado) que se activa al hacer clic en cualquier tarjeta.
+👉 **[Accede a la web aquí](https://tu-usuario.github.io/desafio-mundialero2026/)**
 
-Se creó una base de datos ficticia de plantillas para mostrar datos proyectados de Director Técnico y Jugadores Clave, proporcionando información detallada al usuario.
+---
 
-Etapa 5: Diseño Temático FIFA 2026™
-Identidad Visual: Se aplicó una paleta de colores oficial (Índigo Profundo, Violeta y Verde Neón) con degradados CSS.
+## 📸 Capturas de Pantalla
+*(Si tienes una imagen, súbela a la carpeta del proyecto y descomenta esta línea)*
+<!-- ![Interfaz Principal](captura-proyecto.png) -->
 
-Tipografía y Estilo: Se utilizó la propiedad background-clip: text para aplicar el degradado oficial del Mundial a los encabezados, logrando un acabado profesional.
+---
 
-Responsividad: Se optimizó la grilla (CSS Grid) para adaptarse a cualquier dispositivo (Mobile-first).
+## 👨‍💻 Autor
+Desarrollado por **Maxi**
+*Analista Programador*
 
-🛠️ Cómo ejecutar el proyecto
-Clona este repositorio: git clone https://github.com/tu-usuario/desafio-mundialero2026.git
-
-Abre el archivo index.html en tu navegador o utiliza la extensión Live Server de VS Code.
-
-Haz clic en "Cargar Selecciones" para iniciar el consumo de la API.
-
-🌐 Enlace al Proyecto
-Puedes visualizar la versión desplegada aquí:
-👉 https://tu-usuario.github.io/desafio-mundialero2026/
-
-💡 Nota para el profesor:
-Este proyecto demuestra habilidades en consumo de servicios REST, manipulación eficiente del DOM, gestión de estados locales (sessionStorage) y diseño de interfaces modernas aplicadas a una temática deportiva de actualidad.
+---
+> *Este proyecto fue realizado como parte del desafío práctico de Front-End, aplicando buenas prácticas de programación, arquitectura de componentes y diseño centrado en el usuario.*interfaces modernas aplicadas a una temática deportiva de actualidad.
